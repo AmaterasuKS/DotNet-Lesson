@@ -1,69 +1,69 @@
 ﻿//TASK_1
 //Калькулятор задание не плохое, мне понравилось. Сделал похожим методом как у вас на занятии, но чучуть изменил некоторые моменты и добавил функцию подсчета %
 
-using System.Text;
-class Program
-{
-    enum Operations
-    {
-        Plus = '+',
-        Minus = '-',
-        Multi = '*',
-        Division = '/',
-        Percentage = '%'
-    }
-    static void Main()
-    {
-        try
-        {
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.Write("Введите первое число: ");
-            var num1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите второе число: ");
-            var num2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Выберите операцию (+ - * / %):");
-            var operation = (Operations)Convert.ToChar(Console.ReadLine() ?? string.Empty);
+//using System.Text;
+//class Program
+//{
+//    enum Operations
+//    {
+//        Plus = '+',
+//        Minus = '-',
+//        Multi = '*',
+//        Division = '/',
+//        Percentage = '%'
+//    }
+//    static void Main()
+//    {
+//        try
+//        {
+//            Console.OutputEncoding = Encoding.UTF8;
+//            Console.Write("Введите первое число: ");
+//            var num1 = Convert.ToDouble(Console.ReadLine());
+//            Console.Write("Введите второе число: ");
+//            var num2 = Convert.ToDouble(Console.ReadLine());
+//            Console.WriteLine("Выберите операцию (+ - * / %):");
+//            var operation = (Operations)Convert.ToChar(Console.ReadLine() ?? string.Empty);
 
-            switch (operation)
-            {
-                case Operations.Plus:
-                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 + num2}");
-                    break;
-                case Operations.Minus:
-                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 - num2}");
-                    break;
-                case Operations.Multi:
-                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 * num2}");
-                    break;
-                case Operations.Division:
-                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 / num2}");
-                    break;
-                case Operations.Percentage:
-                    double perc = (num1 * num2) / 100;
-                    Console.WriteLine($"{num1} {(char)operation} {num2} = {perc}");
-                    break;
-                default:
-                    Console.WriteLine("Неизвестное математическое действие.");
-                    break;
-            }
-        }
-        catch (DivideByZeroException ex)
-        {
-            Console.WriteLine(ex.Message);
-            Console.WriteLine("Не дели на ноль!");
-        }
-        catch (FormatException ex)
-        {
-            Console.WriteLine(ex.Message);
-            Console.WriteLine("Неизвестный формат данных!");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-            Console.WriteLine("Неизвестная ошибка!");
-        }
-    }
-}
+//            switch (operation)
+//            {
+//                case Operations.Plus:
+//                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 + num2}");
+//                    break;
+//                case Operations.Minus:
+//                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 - num2}");
+//                    break;
+//                case Operations.Multi:
+//                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 * num2}");
+//                    break;
+//                case Operations.Division:
+//                    Console.WriteLine($"{num1} {(char)operation} {num2} = {num1 / num2}");
+//                    break;
+//                case Operations.Percentage:
+//                    double perc = (num1 * num2) / 100;
+//                    Console.WriteLine($"{num1} {(char)operation} {num2} = {perc}");
+//                    break;
+//                default:
+//                    Console.WriteLine("Неизвестное математическое действие.");
+//                    break;
+//            }
+//        }
+//        catch (DivideByZeroException ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            Console.WriteLine("Не дели на ноль!");
+//        }
+//        catch (FormatException ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            Console.WriteLine("Неизвестный формат данных!");
+//        }
+//        catch (Exception ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            Console.WriteLine("Неизвестная ошибка!");
+//        }
+//    }
+//}
 
 
 //TASK_2
@@ -131,7 +131,7 @@ class Program
             }
             Console.Write("Количество: ");                                          //Сколько хотим взять
             int quantity = int.Parse(Console.ReadLine());
-            if (quantity <= 0) 
+            if (quantity <= 0)
             {
                 Console.WriteLine("Введите допустимое количество.");
                 Console.Write("Количество: ");
@@ -192,6 +192,6 @@ class Program
             Console.WriteLine("Произошла неизвестная ошибка:");
             Console.WriteLine(ex.Message);
         }
-        
+
     }
 }
