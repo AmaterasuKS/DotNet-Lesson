@@ -101,7 +101,7 @@ class Program
             try
             {
                 Console.Clear();
-                Console.WriteLine("Выберете dz от 1 до 6");
+                Console.WriteLine("Выберете homework от 1 до 6");
                 HomeWork nr;
                 nr = (HomeWork)int.Parse(Console.ReadLine());
 
