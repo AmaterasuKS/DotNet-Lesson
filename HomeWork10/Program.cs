@@ -5,7 +5,7 @@ using System;
 class City
 {
 
-    public string CityName { get; set; }                         // Поля класу
+    public string CityName { get; set; }                         // Поля класа
     public string RegionName { get; set; }
     public string CountryName { get; set; }
     public int Population { get; set; }
